@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://y847uv4eqsi5"]
+
+[ext_resource type="Script" path="res://turel.gd" id="1_3w5kb"]
+[ext_resource type="PackedScene" uid="uid://dwllqsfftorpd" path="res://zone.tscn" id="2_cjiuq"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_sq7uu"]
+
+[sub_resource type="Curve" id="Curve_8gvjb"]
+_data = [Vector2(1, 0.571429), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_gp6ps"]
+curve_z = SubResource("Curve_8gvjb")
+
+[node name="turel" type="Area2D"]
+rotation = 1.57334
+scale = Vector2(0.055, 0.055)
+script = ExtResource("1_3w5kb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -0.00508098
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(2.27374e-13, -4.76837e-07)
+rotation = -0.00508098
+scale = Vector2(128.27, 128.216)
+mesh = SubResource("SphereMesh_sq7uu")
+texture = SubResource("CurveXYZTexture_gp6ps")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -22.0
+offset_top = -16.0
+offset_right = 42.0
+offset_bottom = 48.0
+rotation = -0.00508098
+scale = Vector2(0.71, 0.525)
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect/ColorRect3"]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 48.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/ColorRect3/ColorRect4"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 24.0
+offset_right = 8.0
+offset_bottom = 40.0
+color = Color(1, 0.745098, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Tzone1" parent="." instance=ExtResource("2_cjiuq")]
+scale = Vector2(15, 15)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,226 @@
+[gd_scene load_steps=7 format=3 uid="uid://f2t08b4irp0l"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3a01b"]
+
+[sub_resource type="Curve" id="Curve_ktjpy"]
+_data = [Vector2(1, 0.571429), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_0ygfy"]
+curve_z = SubResource("Curve_ktjpy")
+
+[sub_resource type="SphereMesh" id="SphereMesh_w17yv"]
+
+[sub_resource type="Curve" id="Curve_3ey4k"]
+_data = [Vector2(1, 0.571429), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_5qwb4"]
+curve_z = SubResource("Curve_3ey4k")
+
+[node name="shop" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = 1.0
+offset_right = 192.0
+offset_bottom = 657.0
+color = Color(0.54099, 0.54099, 0.54099, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_top = 312.0
+offset_right = 192.0
+offset_bottom = 328.0
+color = Color(0, 0, 0, 1)
+
+[node name="turel1" type="Node2D" parent="."]
+position = Vector2(96, 169)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="turel1"]
+position = Vector2(2.27374e-13, -4.76837e-07)
+rotation = -0.00508098
+scale = Vector2(128.27, 128.216)
+mesh = SubResource("SphereMesh_3a01b")
+texture = SubResource("CurveXYZTexture_0ygfy")
+
+[node name="ColorRect" type="ColorRect" parent="turel1"]
+offset_left = -22.0
+offset_top = -16.0
+offset_right = 42.0
+offset_bottom = 48.0
+rotation = -0.00508098
+scale = Vector2(0.71, 0.525)
+color = Color(1, 1, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="turel1/ColorRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 24.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="turel1/ColorRect/ColorRect3"]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 48.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="turel1/ColorRect/ColorRect3/ColorRect4"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 24.0
+offset_right = 8.0
+offset_bottom = 40.0
+color = Color(1, 0.745098, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="turel2" type="Node2D" parent="."]
+position = Vector2(97, 472)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="turel2"]
+position = Vector2(2.27374e-13, -4.76837e-07)
+scale = Vector2(128.27, 128.216)
+mesh = SubResource("SphereMesh_w17yv")
+texture = SubResource("CurveXYZTexture_5qwb4")
+
+[node name="ColorRect2" type="ColorRect" parent="turel2"]
+offset_left = -42.0799
+offset_top = 16.3784
+offset_right = 21.9201
+offset_bottom = 80.3784
+rotation = -1.5708
+scale = Vector2(0.5, 0.37)
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="turel2/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.21875
+anchor_top = 0.34375
+anchor_right = 1.28125
+anchor_bottom = 0.71875
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect7" type="ColorRect" parent="turel2/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.796875
+anchor_right = 0.25
+anchor_bottom = 0.375
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect8" type="ColorRect" parent="turel2/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = -0.802365
+anchor_right = 1.0
+anchor_bottom = 0.36951
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="turel2/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6875
+anchor_top = 0.168919
+anchor_right = 0.84375
+anchor_bottom = 0.543919
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="turel2/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1875
+anchor_top = 0.168919
+anchor_right = 0.34375
+anchor_bottom = 0.543919
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="turel2/ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4375
+anchor_top = 0.591216
+anchor_right = 0.59375
+anchor_bottom = 0.794341
+color = Color(0.997373, 0.645565, 0.77721, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="turel2"]
+offset_left = 40.42
+offset_top = -16.0542
+offset_right = 104.42
+offset_bottom = 47.9458
+rotation = 1.5708
+scale = Vector2(0.5, 0.37)
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="turel2/ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.21875
+anchor_top = 0.34375
+anchor_right = 1.28125
+anchor_bottom = 0.71875
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect7" type="ColorRect" parent="turel2/ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.796875
+anchor_right = 0.25
+anchor_bottom = 0.375
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect8" type="ColorRect" parent="turel2/ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = -0.802365
+anchor_right = 1.0
+anchor_bottom = 0.36951
+color = Color(1, 0.85098, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="turel2/ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6875
+anchor_top = 0.168919
+anchor_right = 0.84375
+anchor_bottom = 0.543919
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="turel2/ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1875
+anchor_top = 0.168919
+anchor_right = 0.34375
+anchor_bottom = 0.543919
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="turel2/ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4375
+anchor_top = 0.591216
+anchor_right = 0.59375
+anchor_bottom = 0.794341
+color = Color(0.997373, 0.645565, 0.77721, 1)
+metadata/_edit_use_anchors_ = true

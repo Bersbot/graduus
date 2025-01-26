@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=4 uid="uid://cmxq34syxcr7n"]
+
+[ext_resource type="Script" path="res://levels.gd" id="1_4f2vn"]
+[ext_resource type="TileSet" uid="uid://duh5fak8002r3" path="res://textures.tres" id="1_nbtfb"]
+[ext_resource type="PackedScene" uid="uid://bb550ms8sld32" path="res://music.tscn" id="3_22b4s"]
+
+[node name="levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4f2vn")
+metadata/_edit_horizontal_guides_ = [-176.0]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(579, 320)
+scale = Vector2(10, 10)
+tile_set = ExtResource("1_nbtfb")
+format = 2
+
+[node name="BackGround" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAD+////AQACAAAAAAD/////AQACAAAAAAAAAP//AQACAAAAAAABAP//AQACAAAAAAA=")
+tile_set = ExtResource("1_nbtfb")
+
+[node name="FrontGround" type="TileMapLayer" parent="TileMap"]
+position = Vector2(0.1, 0)
+tile_map_data = PackedByteArray("AAD8//7/AQADAAAAAAD8////AQADAAAAAAD8/wAAAQADAAAAAAD8/wEAAQADAAAAAAD9//7/AQADAAAAAAD9////AQADAAAAAAD9/wAAAQADAAAAAAD9/wEAAQADAAAAAAD+//7/AQADAAAAAAD+/wAAAQADAAAAAAD+/wEAAQADAAAAAAD///7/AQADAAAAAAD//wAAAQADAAAAAAD//wEAAQADAAAAAAAAAP7/AQADAAAAAAAAAP//AQAEAAAAAAAAAAAAAQADAAAAAAAAAAEAAQADAAAAAAABAAAAAQADAAAAAAABAAEAAQADAAAAAAACAP7/AQADAAAAAAACAP//AQADAAAAAAACAAAAAQADAAAAAAACAAEAAQADAAAAAAADAP7/AQADAAAAAAADAP//AQADAAAAAAADAAAAAQADAAAAAAADAAEAAQADAAAAAAABAP7/AQADAAAAAAABAP//AQAFAAAAAAD+////AQAEAAAAAAD/////AQAFAAAAAAA=")
+tile_set = ExtResource("1_nbtfb")
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2(580, 320)
+
+[node name="LVL2" type="Button" parent="Buttons"]
+offset_left = -548.0
+offset_top = 8.0
+offset_right = 548.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 81
+text = "Level 2
+comming son"
+
+[node name="LVL1" type="Button" parent="Buttons"]
+offset_left = -548.0
+offset_top = -280.0
+offset_right = 548.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 196
+text = "Level 1"
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("3_22b4s")]
+position = Vector2(8, 24)

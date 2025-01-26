@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwllqsfftorpd"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_xhocx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_janhs"]
+radius = 32.0
+
+[node name="Tzone1" type="Area2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0.956863, 0.964706, 0.117647)
+position = Vector2(-5.72205e-06, 1.90735e-06)
+scale = Vector2(64.5726, 64.5)
+mesh = SubResource("SphereMesh_xhocx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_janhs")
